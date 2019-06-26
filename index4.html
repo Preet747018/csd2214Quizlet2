@@ -16,6 +16,9 @@ sunShape.graphics.endFill();
 sunShape.x = 25;
 sunShape.y = 25;
 stage.addChild(sunShape);
+titleText = new createjs.Text(
+    "Hello Createjs"
+);
 createjs.Tween.get(sunShape, {loop:true})
    .to({x:525, y:375}, 3000)
    .wait(2000)
