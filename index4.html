@@ -16,7 +16,12 @@ sunShape.graphics.endFill();
 sunShape.x = 25;
 sunShape.y = 25;
 stage.addChild(sunShape);
-createjs.Tween.get(sunShape, {loop:true});
+createjs.Tween.get(sunShape, {loop:true})
+   .to({x:525, y:375}, 3000);
+   createjs.Ticker.addEventListener("tick", tickHandler);
+}
+function tickHandler(e)
+{
 stage.update();
 }
 </script>
@@ -41,4 +46,4 @@ padding-right: 0;
 This web browser does not support canvas.
 </canvas>
 </body>
-</html
+</html>
